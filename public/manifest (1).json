@@ -1,0 +1,25 @@
+{
+  "background_color": "#ffffff",
+  "description": "Premium Tetris experience with Puzzle and Classic modes. Collect lines to unlock premium backdrops.",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "lektorai.github",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "lektorai.github",
+  "start_url": "/\"start_url\": \"index.html\"",
+  "theme_color": "#050505",
+  "icons": [
+    {
+      "src": "https://lektorai.github.io/Prime-Tetris/icon-512.png",
+      "isSquare": false,
+      "isPng": true,
+      "isWebp": false,
+      "isJpg": false,
+      "width": 0,
+      "is512x512": false,
+      "is256x256": false,
+      "is192x192": false
+    }
+  ]
+}
