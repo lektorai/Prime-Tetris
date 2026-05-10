@@ -1,7 +1,7 @@
 import { Piece, PieceType } from './types/tetris';
 
 export const COLS = 10;
-export const ROWS = 18;
+export const ROWS = 20;
 
 export const PIECES: Record<PieceType, Piece> = {
   I: {
@@ -12,7 +12,7 @@ export const PIECES: Record<PieceType, Piece> = {
       [0, 0, 0, 0],
       [0, 0, 0, 0],
     ],
-    color: '#FFD700', // Gold
+    color: '#00f0f0', // Cyan
   },
   J: {
     type: 'J',
@@ -21,7 +21,7 @@ export const PIECES: Record<PieceType, Piece> = {
       [1, 1, 1],
       [0, 0, 0],
     ],
-    color: '#FFD700',
+    color: '#0000f0', // Blue
   },
   L: {
     type: 'L',
@@ -30,7 +30,7 @@ export const PIECES: Record<PieceType, Piece> = {
       [1, 1, 1],
       [0, 0, 0],
     ],
-    color: '#FFD700',
+    color: '#f0a000', // Orange
   },
   O: {
     type: 'O',
@@ -38,7 +38,7 @@ export const PIECES: Record<PieceType, Piece> = {
       [1, 1],
       [1, 1],
     ],
-    color: '#FFD700',
+    color: '#f0f000', // Yellow
   },
   S: {
     type: 'S',
@@ -47,7 +47,7 @@ export const PIECES: Record<PieceType, Piece> = {
       [1, 1, 0],
       [0, 0, 0],
     ],
-    color: '#FFD700',
+    color: '#00f000', // Green
   },
   T: {
     type: 'T',
@@ -56,7 +56,7 @@ export const PIECES: Record<PieceType, Piece> = {
       [1, 1, 1],
       [0, 0, 0],
     ],
-    color: '#FFD700',
+    color: '#a000f0', // Purple
   },
   Z: {
     type: 'Z',
@@ -65,7 +65,7 @@ export const PIECES: Record<PieceType, Piece> = {
       [0, 1, 1],
       [0, 0, 0],
     ],
-    color: '#FFD700',
+    color: '#f00000', // Red
   },
 };
 
