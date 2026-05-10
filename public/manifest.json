@@ -1,12 +1,9 @@
 {
-  "name": "Prime Tetris",
+  "name": "PRIME TETRIS",
   "short_name": "Tetris",
-  "description": "Premium Tetris experience with Puzzle and Classic modes. Collect lines to unlock premium backdrops.",
-  "id": "com.prime.tetris.v1",
+  "description": "Premium Tetris experience with Puzzle and Classic modes.",
   "start_url": "/",
-  "scope": "/",
   "display": "standalone",
-  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
   "background_color": "#000000",
   "theme_color": "#050505",
   "icons": [
@@ -28,10 +25,5 @@
       "type": "image/png",
       "purpose": "maskable"
     }
-  ],
-  "screenshots": [],
-  "categories": ["games"],
-  "orientation": "portrait",
-  "lang": "en-US",
-  "dir": "ltr"
+  ]
 }
