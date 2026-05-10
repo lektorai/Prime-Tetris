@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useRef, ChangeEvent } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Pause, Play, Trophy, Sparkles, Settings as SettingsIcon, X, Globe, Palette, DownloadCloud } from 'lucide-react';
+import { Pause, Play, Trophy, Sparkles, Settings as SettingsIcon, X, Globe, Palette } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { useTetris } from './hooks/useTetris';
 import { Menu } from './components/Menu';
