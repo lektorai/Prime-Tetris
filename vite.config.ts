@@ -9,7 +9,6 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [react(), tailwindcss()],
 
-    // ВАЖНО ДЛЯ GITHUB PAGES
     base: '/Prime-Tetris/',
 
     define: {
