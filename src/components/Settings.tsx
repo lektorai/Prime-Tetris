@@ -11,11 +11,9 @@ interface SettingsProps {
   theme: Theme;
   setTheme: (t: Theme) => void;
   t: any;
-  onInstall?: () => void;
-  canInstall?: boolean;
 }
 
-export const Settings: React.FC<SettingsProps> = ({ onClose, lang, setLang, theme, setTheme, t, onInstall, canInstall }) => {
+export const Settings: React.FC<SettingsProps> = ({ onClose, lang, setLang, theme, setTheme, t }) => {
   const isClassic = theme === 'classic';
   const isLight = theme === 'light';
   
@@ -185,27 +183,6 @@ export const Settings: React.FC<SettingsProps> = ({ onClose, lang, setLang, them
               ))}
             </div>
           </section>
-
-          {canInstall && onInstall && (
-            <section>
-              <h3 className={`text-[10px] font-black uppercase tracking-[0.2em] mb-4 opacity-40 ${
-                isClassic ? 'text-[#0f380f]' : isLight ? 'text-gray-500' : 'text-white'
-              }`}>
-                PWA
-              </h3>
-              <button
-                onClick={onInstall}
-                className={`w-full py-4 rounded-xl border flex items-center justify-center gap-3 font-bold text-xs tracking-widest transition-all ${
-                  isClassic ? 'bg-[#0f380f] border-[#0f380f] text-[#9bbc0f]' : 
-                  isLight ? 'bg-yellow-50 text-yellow-700 border-yellow-200' :
-                  'bg-yellow-500/10 border-yellow-500/30 text-yellow-500 hover:bg-yellow-500/20'
-                }`}
-              >
-                <Palette size={16} />
-                {t.install}
-              </button>
-            </section>
-          )}
         </div>
 
         <button 

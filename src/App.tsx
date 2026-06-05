@@ -29,30 +29,9 @@ export default function App() {
     return (saved as Theme) || 'light';
   });
   const [showSettings, setShowSettings] = useState(false);
-  const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const t = translations[lang];
-
-  // PWA Install Prompt Logic
-  useEffect(() => {
-    const handleBeforeInstallPrompt = (e: any) => {
-      e.preventDefault();
-      setDeferredPrompt(e);
-    };
-
-    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
-    return () => window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
-  }, []);
-
-  const handleInstallClick = async () => {
-    if (!deferredPrompt) return;
-    deferredPrompt.prompt();
-    const { outcome } = await deferredPrompt.userChoice;
-    if (outcome === 'accepted') {
-      setDeferredPrompt(null);
-    }
-  };
 
   const {
     grid,
@@ -269,8 +248,6 @@ export default function App() {
             theme={theme}
             setTheme={setTheme}
             t={t}
-            onInstall={handleInstallClick}
-            canInstall={!!deferredPrompt}
           />
         )}
       </AnimatePresence>
@@ -293,8 +270,6 @@ export default function App() {
               t={t} 
               theme={theme} 
               onOpenSettings={() => setShowSettings(true)}
-              onInstall={handleInstallClick}
-              canInstall={!!deferredPrompt}
             />
           </motion.div>
         )}

@@ -13,8 +13,6 @@ interface MenuProps {
   t: any;
   theme: Theme;
   onOpenSettings: () => void;
-  onInstall?: () => void;
-  canInstall?: boolean;
 }
 
 export const Menu: React.FC<MenuProps> = ({ 
@@ -26,8 +24,6 @@ export const Menu: React.FC<MenuProps> = ({
   t, 
   theme, 
   onOpenSettings,
-  onInstall,
-  canInstall
 }) => {
   const isNeon = theme === 'neon';
   const isLight = theme === 'light';
@@ -164,22 +160,6 @@ export const Menu: React.FC<MenuProps> = ({
           >
             {t.highScore}: {highScore.toLocaleString()}
           </motion.div>
-        )}
-
-        {canInstall && onInstall && (
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={onInstall}
-            className={`mt-6 flex items-center gap-2 px-4 py-2 rounded-full border text-[10px] font-bold tracking-[0.2em] uppercase transition-all ${
-              isClassic ? 'bg-[#9bbc0f] border-[#0f380f] text-[#0f380f]' : 
-              isLight ? 'bg-white border-gray-200 text-gray-500 shadow-sm' : 
-              'bg-white/5 border-white/10 text-white/40 hover:text-white'
-            }`}
-          >
-            <Star size={12} className="text-yellow-500" fill="currentColor" />
-            {t.install}
-          </motion.button>
         )}
 
       {!isClassic && (
